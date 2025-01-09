@@ -1,14 +1,13 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { Component } from '@angular/core';
 
-import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
+import { UserInputComponent } from './user-input/user-input.component';
 import { InvestmentResultsComponent } from './investment-results/investment-results.component';
-import { UserInputModule } from './user-input/user-input.module';
 
-@NgModule({
-  declarations: [AppComponent, HeaderComponent, InvestmentResultsComponent],
-  imports: [BrowserModule, UserInputModule],
-  bootstrap: [AppComponent],
+@Component({
+  selector: 'app-root',
+  standalone: true,
+  templateUrl: './app.component.html',
+  imports: [HeaderComponent, UserInputComponent, InvestmentResultsComponent],
 })
-export class AppModule {}
+export class AppComponent {}
