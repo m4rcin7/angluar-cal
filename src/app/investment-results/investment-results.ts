@@ -7,8 +7,9 @@ import { InvestmentService } from '../investment.service';
   templateUrl: './investment-results.component.html',
   styleUrl: './investment-results.component.css',
 })
+
 export class InvestmentResultsComponent {
   private investmentService = inject(InvestmentService);
 
-  results = computed(() => this.investmentService.resultData());
+  results = computed(() => this.investmentService.resultData()); 
 }

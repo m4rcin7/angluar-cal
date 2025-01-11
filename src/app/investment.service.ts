@@ -1,4 +1,5 @@
 import { Injectable, signal } from '@angular/core';
+
 import type { InvestmentInput } from './investment-input.model';
 
 @Injectable({ providedIn: 'root' })
@@ -11,7 +12,7 @@ export class InvestmentService {
         annualInvestment: number;
         totalInterest: number;
         totalAmountInvested: number;
-      }
+      }[]
     | undefined
   >(undefined);
 
